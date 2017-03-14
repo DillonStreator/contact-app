@@ -1,0 +1,8 @@
+<h2><%= @contact.first_name %> <%= @contact.last_name %></h2>
+<h5><%= @contact.email %></h5>
+<h6><%= @contact.phone_number %></h6>
+<a href="/index/edit/<%= @contact.id %>">Edit contact</a><br>
+<a href="/index">back to all contacts</a>
+<%= form_tag "/index/destroy/#{@contact.id}", method: :delete do %>
+  <input type="submit" value="delete contact">
+<% end %>
