@@ -13,15 +13,46 @@
  *= require_tree .
  *= require_self
  */
+.btn-search {
+  margin-top: 5px;
+}
+
+ .navbar {
+  font-size: 1.5em;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-color: black;
+  opacity: 0.8;
+ }
+ .navbar:hover {
+  opacity: 1.0;
+ }
+
+ h1{
+  clear: left;
+ }
 
 body {
   padding-top: 70px;
-  margin-left: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
   margin-bottom: 10px;
+  background-image: url('sayagata.png');
+  font-family: 'Lobster Two', cursive;
+font-family: 'Kreon', serif;
 }
 
 .home_page {
   text-align: center;
   margin-top: 100px;
 }
+
+.btn, .btn-default {
+  margin-top: 10px;
+}
+
+.brand{
+  font-family: 'Rancho', cursive;
+  margin-right: 20px;
+ }
 

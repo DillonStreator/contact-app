@@ -1,8 +1,19 @@
-<h2><%= @contact.first_name %> <%= @contact.last_name %></h2>
-<h5><%= @contact.email %></h5>
-<h6><%= @contact.phone_number %></h6>
-<a href="/index/edit/<%= @contact.id %>">Edit contact</a><br>
-<a href="/index">back to all contacts</a>
-<%= form_tag "/index/destroy/#{@contact.id}", method: :delete do %>
-  <input type="submit" value="delete contact">
+<h2 style="text-decoration: underline;"><%= @contact.full_name %></h2>
+<h5>Email: <%= @contact.email %></h5>
+<h5>Phone Number: <%= @contact.japanese_number %></h5>
+<h4 style="text-decoration: underline;">Bio:</h4>
+<% if @contact.bio == "" or @contact.bio.nil? %>
+  <p>No bio written...</p>
+<% else %>
+  <p><%= @contact.bio %></p>
 <% end %>
+
+<%= form_tag "/contacts/edit/#{@contact.id}", method: :get do %>
+  <input class="btn btn-default" type="submit" value="edit contact">
+<% end %>
+
+<%= form_tag "/contacts/destroy/#{@contact.id}", method: :delete do %>
+  <input class="btn btn-default" type="submit" value="delete contact">
+<% end %>
+
+<p><sub>Created: <%= @contact.friendly_created_at %></sub></p>

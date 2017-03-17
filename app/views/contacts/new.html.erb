@@ -1,19 +1,24 @@
 <h1>Create new contact</h1>
-<%= form_tag "/index/create", method: :post do %>
-  <div>
-    First name: <input type="text" name="first_name">
+<%= form_tag "/contacts/create", method: :post do %>
+  <div class="col-xs-4">
+    First name: <input class="form-control" type="text" name="first_name">
   </div>
-  <div>
-    Last name: <input type="text" name="last_name">
+  <div class="col-xs-4">
+    Middle name: <input class="form-control" type="text" name="middle_name">
   </div>
-  <div>
-    Email: <input type="text" name="email">
+  <div class="col-xs-4">
+    Last name: <input class="form-control" type="text" name="last_name">
   </div>
-  <div>
-    Phone number: <input type="text" name="phone_number">
+  <div class="col-xs-6">
+    Email: <input class="form-control" type="text" name="email">
   </div>
-  <div>
-    <input type="submit" value="create contact">
+  <div class="col-xs-6">
+    Phone number: <input class="form-control" type="text" name="phone_number">
+  </div>
+  <div class="col-xs-12">
+    Bio: <textarea class="form-control" name="bio" rows="3" id="Bio"></textarea>
+  </div>
+  <div class="col-xs-12">
+    <input class="btn btn-default" type="submit" value="create contact">
   </div>
 <% end %>
-<a href="/index">back to all contacts</a>
